@@ -2,13 +2,49 @@ import { Briefcase, Calendar, MapPin } from 'lucide-react';
 import Image from 'next/image';
 
 const Experience = () => {
+
+  const formatDate = (date: string | null) => {
+    if (!date) return "Present";
+    const [year, month, day] = date.split("-").map(Number);
+    const localDate = new Date(year, month - 1, day);
+    return localDate.toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    });
+  };
+
+  const getDuration = (start: string, end: string | null) => {
+    const startDate = new Date(start);
+    const endDate = end ? new Date(end) : new Date();
+    let years = endDate.getFullYear() - startDate.getFullYear();
+    let months = endDate.getMonth() - startDate.getMonth();
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+    const isCurrent = !end;
+    if (isCurrent) {
+      return `+${years} year${years !== 1 ? 's' : ''}`;
+    }
+    let result = "";
+    if (years > 0) {
+      result += `${years} year${years !== 1 ? 's' : ''}`;
+    }
+    if (months > 0) {
+      if (result) result += " ";
+      result += `${months} month${months !== 1 ? 's' : ''}`;
+    }
+    return result || "0 months";
+  };
+
   const experiences = [
     {
       company: "Overscope SRL",
       image: "/companies/overscope.png",
       role: "Software Architecture & Engineering Consultant",
-      period: "October 2023 - Present (+2 years)",
-      location: "Remote / Bolivia",
+      start: "2023-10-01",
+      end: null,
+      location: "Hybrid / Bolivia",
       description: "Consultoria en implementación de arquitecturas modernas y optimización de flujos de trabajo en equipos distribuidos.",
       tech: ["Angular", "NestJS", "TypeScript", "PostgreSQL", "Docker", "CI/CD", "Ionic"]
     },
@@ -16,7 +52,8 @@ const Experience = () => {
       company: "Digital Harbor Inc.",
       image: "/companies/dh.png",
       role: "Full-Stack Developer",
-      period: "May 2023 - Present (+3 years)",
+      start: "2023-05-01",
+      end: null,
       location: "Remote / International",
       description: "Desarrollo de soluciones escalables para Social Text y Yedy.",
       tech: ["Angular", "TypeScript", "NgRX", "SCSS", "Figma"]
@@ -25,7 +62,8 @@ const Experience = () => {
       company: "Banco Fassil S.A.",
       image: "/companies/fassil.png",
       role: "Software Engineer",
-      period: "June 2021 - May 2023 (2 years)",
+      start: "2021-06-01",
+      end: "2023-05-02",
       location: "Santa Cruz, Bolivia",
       description: "Desarrollo del proyecto 'Gestor Digital' y creación del 'Pionus UI Kit', estandarizando la interfaz de usuario para toda la banca digital.",
       tech: ["Angular", "RxJS", "Angular Material", "Design Systems", "UI/UX"]
@@ -34,7 +72,8 @@ const Experience = () => {
       company: "Clan Bolivia",
       image: "/companies/clan.png",
       role: "Full-Stack Developer",
-      period: "April 2021 - August 2021 (5 months)",
+      start: "2021-04-01",
+      end: "2021-08-02",
       location: "Remote / Bolivia",
       description: "Contribución al proyecto 'TuPasaje.bo'. Creación de aplicaciones web y plataformas administrativas de alta demanda.",
       tech: ["Angular", "PHP", "MySQL", "Nebula UI"]
@@ -43,7 +82,8 @@ const Experience = () => {
       company: "QSM Solutions",
       image: "/companies/qsm.png",
       role: "Software Developer, Tech Lead",
-      period: "January 2020 - June 2021 (1 year 6 months)",
+      start: "2020-01-01",
+      end: "2021-06-02",
       location: "Santa Cruz, Bolivia",
       description: "Liderazgo en el desarrollo de soluciones personalizadas y conceptualización de plataformas como Dogfy y Ventu.",
       tech: ["Angular", "Vue.js", "jQuery", "MySQL", "FastAPI", "Flask", "Ionic", "Python", "Figma"]
@@ -51,7 +91,8 @@ const Experience = () => {
     {
       company: "Freelancer",
       role: "Graphic Designer",
-      period: "2019 - Abril 2021 (2 years 4 months)",
+      start: "2019-05-01",
+      end: "2021-04-02",
       location: "Santa Cruz, Bolivia",
       description: "Primeros pasos profesionales enfocados en creación de branding corporativo y producción audiovisual.",
       tech: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Premiere Pro"]
@@ -96,7 +137,10 @@ const Experience = () => {
                 <div className="flex flex-col md:items-end text-sm text-zinc-500">
                   <div className="flex items-center gap-2">
                     <Calendar size={14} />
-                    {exp.period}
+                    <div className="text-sm text-zinc-400">
+                      {formatDate(exp.start)} - {formatDate(exp.end)} (
+                      {getDuration(exp.start, exp.end)})
+                    </div>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin size={14} />

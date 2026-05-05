@@ -2,6 +2,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
+
+  const getYearsOfExperience = () => {
+    const startDate = new Date(2020, 0, 6);
+    const today = new Date();
+
+    let years = today.getFullYear() - startDate.getFullYear();
+
+    const hasHadAnniversary =
+      today.getMonth() > startDate.getMonth() ||
+      (today.getMonth() === startDate.getMonth() &&
+        today.getDate() >= startDate.getDate());
+
+    if (!hasHadAnniversary) {
+      years--;
+    }
+
+    return years;
+  };
+
   return (
     <section className="relative pt-24 md:pt-32 pb-10 px-6 max-w-7xl mx-auto flex flex-col items-center text-center">
       <div className="flex flex-col-reverse md:flex-row md:flex-row gap-5 md:gap-15">
@@ -11,7 +30,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
             </span>
-            Available for new challanges
+            Available for new challenges
           </div>
 
           <h1 className="text-3xl md:text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
@@ -48,11 +67,13 @@ export default function Home() {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:mt-20 pt-10 md:border-t border-zinc-800/50 w-full">
         <div>
-          <div className="text-3xl font-bold">+6 Years</div>
+          <div className="text-3xl font-bold">
+            +{getYearsOfExperience()} Years
+          </div>
           <div className="text-zinc-500 text-sm">Experience</div>
         </div>
         <div>
-          <div className="text-3xl font-bold">+11</div>
+          <div className="text-3xl font-bold">+12</div>
           <div className="text-zinc-500 text-sm">Projects Developed</div>
         </div>
         <div className="hidden md:block" title="I hope...">
