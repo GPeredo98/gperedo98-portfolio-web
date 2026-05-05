@@ -15,7 +15,7 @@ export default function TransitionProvider({
 			key={pathname}
 			initial={{ x: 40, opacity: 0 }}
 			animate={{ x: 0, opacity: 1 }}
-			transition={{ duration: 0.35, ease: 'easeOut' }}
+			transition={{ duration: 0.25, ease: 'easeOut' }}
 		>
 			{children}
 		</motion.div>
