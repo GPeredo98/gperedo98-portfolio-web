@@ -1,11 +1,13 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
 	const pathname = usePathname();
+	const [isOpen, setIsOpen] = useState(false);
 
 	const navItems = [
 		{ name: 'Knowledge', href: '/knowledge' },
@@ -22,11 +24,21 @@ const Navbar = () => {
 
 	return (
 		<nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
-			<div className="bg-zinc-900/70 backdrop-blur-md border border-zinc-800 px-6 py-3 rounded-full flex items-center justify-between shadow-2xl">
+			<div className="bg-zinc-900/70 backdrop-blur-md border border-zinc-800 px-4 md:px-6 py-3 rounded-full flex items-center justify-between shadow-2xl relative">
+				<div className='md:hidden w-6 h-6 flex ml-2 items-center justify-center'>
+					<button
+						onClick={() => setIsOpen(!isOpen)}
+						className="flex flex-col justify-center gap-1 z-50"
+					>
+						<span className={`block h-[2px] w-5 bg-white transition-all ${isOpen ? 'rotate-45 translate-y-[6px]' : ''}`} />
+						<span className={`block h-[2px] w-5 bg-white transition-all ${isOpen ? 'opacity-0' : ''}`} />
+						<span className={`block h-[2px] w-5 bg-white transition-all ${isOpen ? '-rotate-45 -translate-y-[6px]' : ''}`} />
+					</button>
+				</div>
 
 				<Link
 					href="/"
-					className="text-zinc-400 hover:text-white text-sm font-medium transition-colors"
+					className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0"
 				>
 					<Image src="/main-logo.png" alt="Logo" width={62} height={32} />
 				</Link>
@@ -39,7 +51,6 @@ const Navbar = () => {
 							<li key={item.name}>
 								<Link
 									href={item.href}
-									aria-current={active ? 'page' : undefined}
 									className={`relative text-sm font-medium transition-colors ${
 										active
 											? 'text-white'
@@ -66,6 +77,34 @@ const Navbar = () => {
 				>
 					Lets Talk
 				</Link>
+			</div>
+
+			<div
+				className={`md:hidden mt-3 overflow-hidden transition-all duration-300 ${
+					isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+				}`}
+			>
+				<div className="bg-zinc-900/90 backdrop-blur-md border border-zinc-800 rounded-2xl p-6 flex flex-col gap-4">
+
+					{navItems.map((item) => {
+						const active = isActive(item.href);
+
+						return (
+							<Link
+								key={item.name}
+								href={item.href}
+								onClick={() => setIsOpen(false)}
+								className={`text-base font-medium transition-colors ${
+									active
+										? 'text-white'
+										: 'text-zinc-400 hover:text-white'
+								}`}
+							>
+								{item.name}
+							</Link>
+						);
+					})}
+				</div>
 			</div>
 		</nav>
 	);
