@@ -121,7 +121,7 @@ const Experience = () => {
                 <div className='flex items-center gap-4'>
                   {exp.image && (
                     <div>
-                      <Image src={exp.image} alt={`${exp.company} logo`} width={40} height={40} />
+                      <Image src={exp.image} alt={`${exp.company} logo`} width={40} height={40} className='min-w-[40px]' />
                     </div>
                   )}
                   <div>
