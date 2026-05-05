@@ -1,32 +1,78 @@
+import { AngularIcon, AppStoreIcon, BitbucketIcon, BootstrapIcon, CapacitorIcon, CloudflareIcon, DigitalOceanIcon, DockerIcon, DropboxIcon, FastAPIIcon, FigmaIcon, FlaskIcon, GitIcon, GoogleCloudIcon, IonicIcon, LinkedInIcon, MySQLIcon, NestJSIcon, NextJSIcon, NGINXIcon, NgRXIcon, NodeJSIcon, PlayStoreIcon, PostgreSQLIcon, PostHogIcon, PrimeNGIcon, PythonIcon, ReactNativeIcon, RenderIcon, SCSSIcon, SQLAlchemyIcon, SQLiteIcon, TailwindCSSIcon, TypeORMIcon, TypeScriptIcon, VercelIcon } from '@/components/CustomIcons';
 import { 
   Layout, Server, Smartphone, Globe, 
-  Layers, Cloud 
+  Layers, Cloud, 
+  Code2Icon,
 } from 'lucide-react';
 
 const Knowledge = () => {
+  const iconSize = 18;
   const techStack = [
     {
       category: "Frontend Architecture",
       icon: <Layout className="text-cyan-400" />,
-      skills: ["Angular", "TypeScript", "RxJS", "Next.js", "Tailwind CSS", "UI/UX Design", "PrimeNG"],
+      skills: [
+        { name: "Angular", icon: <AngularIcon size={iconSize} />,  },
+        { name: "React", icon: <ReactNativeIcon size={iconSize} />,  },
+        { name: "TypeScript", icon: <TypeScriptIcon size={iconSize} />,  },
+        { name: "Next.js", icon: <NextJSIcon size={iconSize} />,  },
+        { name: "Tailwind CSS", icon: <TailwindCSSIcon size={iconSize} />,  },
+        { name: "NgRX", icon: <NgRXIcon size={iconSize} />,  },
+        { name: "SCSS", icon: <SCSSIcon size={iconSize} />,  },
+        { name: "PrimeNG", icon: <PrimeNGIcon size={iconSize} />,  },
+        { name: "Bootstrap", icon: <BootstrapIcon size={iconSize} />,  },
+        { name: "UI/UX Design", icon: <Code2Icon size={iconSize} />,  },
+        { name: "Figma", icon: <FigmaIcon size={iconSize} />,  },
+      ],
       color: "from-cyan-500/20 to-blue-500/20"
     },
     {
       category: "Backend & Core",
       icon: <Server className="text-purple-400" />,
-      skills: ["NestJS", "Node.js", "RESTful APIs", "TypeORM", "FastAPI", "Python", "PostgreSQL", "MySQL"],
+      skills: [
+        { name: "NestJS", icon: <NestJSIcon size={iconSize} />,  },
+        { name: "Node.js", icon: <NodeJSIcon size={iconSize} />,  },
+        { name: "RESTful APIs", icon: <Code2Icon size={iconSize} />,  },
+        { name: "TypeORM", icon: <TypeORMIcon size={iconSize} />,  },
+        { name: "FastAPI", icon: <FastAPIIcon size={iconSize} />,  },
+        { name: "Flask", icon: <FlaskIcon size={iconSize} />,  },
+        { name: "SQLAlchemy", icon: <SQLAlchemyIcon size={iconSize} />,  },
+        { name: "Python", icon: <PythonIcon size={iconSize} />,  },
+        { name: "PostgreSQL", icon: <PostgreSQLIcon size={iconSize} />,  },
+        { name: "MySQL", icon: <MySQLIcon size={iconSize} />,  },
+      ],
       color: "from-purple-500/20 to-pink-500/20"
     },
     {
       category: "Mobile Solutions",
       icon: <Smartphone className="text-amber-400" />,
-      skills: ["React Native", "Ionic", "Capacitor", "Android/iOS Deploy", "Mobile UI Patterns"],
+      skills: [
+        { name: "React Native", icon: <ReactNativeIcon size={iconSize} />,  },
+        { name: "Ionic", icon: <IonicIcon size={iconSize} />,  },
+        { name: "Capacitor", icon: <CapacitorIcon size={iconSize} />,  },
+        { name: "Android Deploy", icon: <PlayStoreIcon size={iconSize} />,  },
+        { name: "iOS Deploy", icon: <AppStoreIcon size={iconSize} />,  },
+        { name: "SQLite", icon: <SQLiteIcon size={iconSize} />,  },
+        { name: "Mobile UI Patterns", icon: <Code2Icon size={iconSize} />,  },
+      ],
       color: "from-amber-500/20 to-orange-500/20"
     },
     {
       category: "Cloud & Infrastructure",
       icon: <Cloud className="text-emerald-400" />,
-      skills: ["Docker", "CI/CD (Render/Bitbucket)", "AWS/Vercel", "SQL/NoSQL Databases", "Git Flow"],
+      skills: [
+        { name: "Docker", icon: <DockerIcon size={iconSize} />,  },
+        { name: "Render", icon: <RenderIcon size={iconSize} />,  },
+        { name: "Vercel", icon: <VercelIcon size={iconSize} />,  },
+        { name: "DigitalOcean", icon: <DigitalOceanIcon size={iconSize} />,  },
+        { name: "Google Cloud Platform", icon: <GoogleCloudIcon size={iconSize} />,  },
+        { name: "CI/CD Bitbucket", icon: <BitbucketIcon size={iconSize} />,  },
+        { name: "Git Flow", icon: <GitIcon size={iconSize} />,  },
+        { name: "Dropbox", icon: <DropboxIcon size={iconSize} />,  },
+        { name: "PostHog", icon: <PostHogIcon size={iconSize} />,  },
+        { name: "Cloudflare", icon: <CloudflareIcon size={iconSize} />,  },
+        { name: "NGINX", icon: <NGINXIcon size={iconSize} />,  },
+      ],
       color: "from-emerald-500/20 to-teal-500/20"
     }
   ];
@@ -61,10 +107,10 @@ const Knowledge = () => {
               <div className="flex flex-wrap gap-3">
                 {stack.skills.map((skill) => (
                   <span 
-                    key={skill}
-                    className="px-4 py-2 rounded-xl bg-zinc-950/50 border border-zinc-800 text-zinc-400 text-sm font-medium hover:text-cyan-400 hover:border-cyan-500/50 transition-all cursor-default"
+                    key={skill.name}
+                    className="flex gap-2 items-center px-4 py-2 rounded-xl bg-zinc-950/50 border border-zinc-800 text-zinc-400 text-sm font-medium hover:text-cyan-400 hover:border-cyan-500/50 transition-all cursor-default"
                   >
-                    {skill}
+                    {skill.icon} {skill.name}
                   </span>
                 ))}
               </div>
@@ -91,6 +137,8 @@ const Knowledge = () => {
           <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Agile</span>
           <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Team Leadership</span>
           <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Mentoring</span>
+          <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Software Architecture</span>
+          <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Clean Code</span>
         </div>
       </div>
     </section>

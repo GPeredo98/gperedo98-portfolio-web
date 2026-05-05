@@ -11,7 +11,7 @@ const ProjectsSection = () => {
 			description: "Sistema integral de gestión para condominios y seguridad.",
 			mainImage: "/projects/mencargo-main.png",
 			internalImages: ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png", "/projects/mencargo-screenshot-3.png"],
-			tags: ["TypeScript", "Angular", "NestJS", "PostgreSQL", "Ionic", "PrimeNG", "Docker", "Figma"],
+			tags: ["TypeScript", "Angular", "NestJS", "PostgreSQL", "Ionic", "PrimeNG", "Docker", "Figma", "Multitenancy"],
 			type: 'private',
 			links: { preview: "https://mencargo.net" }
 		},
@@ -89,7 +89,7 @@ const ProjectsSection = () => {
 			internalImages: ["/projects/tupasaje-screenshot-1.png", "/projects/tupasaje-screenshot-2.png", "/projects/tupasaje-screenshot-3.png"],
 			tags: ["Angular", "PrimeNG", "Nebula UI", "PHP", "MySQL"],
 			type: 'private',
-			links: { preview: "https://tupasaje.com" }
+			links: { preview: "https://tupasaje.bo" }
 		},
 		{
 			title: "Gestor Digital",
@@ -99,7 +99,7 @@ const ProjectsSection = () => {
 			internalImages: ["/projects/gedi-screenshot-1.png", "/projects/gedi-screenshot-2.png", "/projects/gedi-screenshot-3.png"],
 			tags: ["Angular", "Angular Material", "SCSS", "Figma"],
 			type: 'private',
-			links: { preview: "https://mencargo.net" }
+			links: { preview: "https://fassil.com.bo" }
 		},
 		{
 			title: "Microcréditos Landing Page",
@@ -109,7 +109,7 @@ const ProjectsSection = () => {
 			internalImages: ["/projects/microcreditos-screenshot-1.png", "/projects/microcreditos-screenshot-2.png", "/projects/microcreditos-screenshot-3.png"],
 			tags: ["Angular", "Angular Material", "SCSS", "Figma"],
 			type: 'private',
-			links: { preview: "https://mencargo.net" }
+			links: { preview: "https://fassil.com.bo" }
 		},
 		{
 			title: "Pionus UI Kit",
@@ -119,7 +119,7 @@ const ProjectsSection = () => {
 			internalImages: ["/projects/pionus-screenshot-1.png", "/projects/pionus-screenshot-2.png", "/projects/pionus-screenshot-3.png"],
 			tags: ["Angular", "Angular Material", "SCSS", "Figma"],
 			type: 'private',
-			links: { preview: "https://mencargo.net" }
+			links: { preview: "https://fassil.com.bo" }
 		},
 		{
 			title: "Personal Portfolio",
