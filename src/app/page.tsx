@@ -11,7 +11,7 @@ export default function Home() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
             </span>
-            Available for new projects
+            Available for new challanges
           </div>
 
           <h1 className="text-3xl md:text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
@@ -55,7 +55,7 @@ export default function Home() {
           <div className="text-3xl font-bold">+11</div>
           <div className="text-zinc-500 text-sm">Projects Developed</div>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden md:block" title="I hope...">
           <div className="text-3xl font-bold">100%</div>
           <div className="text-zinc-500 text-sm">Client Satisfaction</div>
         </div>

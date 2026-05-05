@@ -123,7 +123,7 @@ const Knowledge = () => {
         ))}
       </div>
 
-      <div className="mt-12 p-8 rounded-3xl border border-dashed border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6 bg-zinc-900/20">
+      <div className="mt-6 md:mt-12 p-8 rounded-3xl border border-dashed border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6 bg-zinc-900/20">
         <div className="flex items-center gap-4">
           <div className="p-3 rounded-full bg-blue-500/10 text-blue-400">
             <Globe size={24} />
@@ -133,7 +133,7 @@ const Knowledge = () => {
             <p className="text-zinc-500 text-sm">Masters Degree perspective on every project.</p>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Agile</span>
           <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Team Leadership</span>
           <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Mentoring</span>

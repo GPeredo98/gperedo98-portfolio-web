@@ -27,7 +27,7 @@ const Experience = () => {
       role: "Software Engineer",
       period: "June 2021 - May 2023 (2 years)",
       location: "Santa Cruz, Bolivia",
-      description: "Liderazgo en el desarrollo de 'Gestor Digital' y creación del 'Pionus UI Kit', estandarizando la interfaz de usuario para toda la banca digital.",
+      description: "Desarrollo del proyecto 'Gestor Digital' y creación del 'Pionus UI Kit', estandarizando la interfaz de usuario para toda la banca digital.",
       tech: ["Angular", "RxJS", "Angular Material", "Design Systems", "UI/UX"]
     },
     {
@@ -45,7 +45,7 @@ const Experience = () => {
       role: "Software Developer, Tech Lead",
       period: "January 2020 - June 2021 (1 year 6 months)",
       location: "Santa Cruz, Bolivia",
-      description: "Desarrollo independiente de soluciones personalizadas y conceptualización de plataformas como Dogfy y Ventu.",
+      description: "Liderazgo en el desarrollo de soluciones personalizadas y conceptualización de plataformas como Dogfy y Ventu.",
       tech: ["Angular", "Vue.js", "jQuery", "MySQL", "FastAPI", "Flask", "Ionic", "Python", "Figma"]
     },
     {
@@ -53,8 +53,8 @@ const Experience = () => {
       role: "Graphic Designer",
       period: "2019 - Abril 2021 (2 years 4 months)",
       location: "Santa Cruz, Bolivia",
-      description: "Primeros pasos profesionales enfocados en maquetación de alta fidelidad y lógica básica de aplicaciones web.",
-      tech: ["HTML5", "CSS3", "JavaScript"]
+      description: "Primeros pasos profesionales enfocados en creación de branding corporativo y producción audiovisual.",
+      tech: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Premiere Pro"]
     }
   ];
 
