@@ -10,7 +10,7 @@ const ProjectsSection = () => {
 			company: "Overscope SRL",
 			description: "Sistema integral de gestión para condominios y seguridad.",
 			mainImage: "/projects/mencargo-main.png",
-			internalImages: ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png"],
+			internalImages: ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png", "/projects/mencargo-screenshot-3.png"],
 			tags: ["TypeScript", "Angular", "NestJS", "PostgreSQL", "Ionic", "PrimeNG", "Docker", "Figma"],
 			type: 'private',
 			links: { preview: "https://mencargo.net" }
@@ -49,11 +49,24 @@ const ProjectsSection = () => {
 			links: { preview: "https://digitalharborbolivia.com" }
 		},
 		{
+			title: "Lluvia de Colores",
+			company: "Personal Project",
+			description: "Plataforma de estimulación infantil y seguimiento de desarrollo para padres y profesionales.",
+			mainImage: "/projects/lluvia-de-colores-mainn.png",
+			internalImages: ["/projects/lluvia-de-colores-screenshot-1.png", "/projects/lluvia-de-colores-screenshot-2.png", "/projects/lluvia-de-colores-screenshot-3.png"],
+			tags: ["Next.js", "React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL"],
+			type: 'personal',
+			links: {
+				preview: "https://lluviadecolores.vercel.app",
+				github: "https://github.com/GPeredo98/lluvia-de-colores-platform"
+			}
+		},
+		{
 			title: "Ventu",
 			company: "QSM Solutions",
 			description: "Sistema de gestión de ingresos e invitados para eventos y organizadores.",
 			mainImage: "/projects/ventu-main.png",
-			internalImages: ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png"],
+			internalImages: ["/projects/ventu-screenshot-1.png", "/projects/ventu-screenshot-2.png", "/projects/ventu-screenshot-3.png", "/projects/ventu-screenshot-4.png"],
 			tags: ["Angular", "PrimeNG", "Ionic", "MySQL", "Python", "FastAPI", "Figma"],
 			type: 'private',
 			links: { preview: "https://ventu.vip" }
@@ -63,7 +76,7 @@ const ProjectsSection = () => {
 			company: "QSM Solutions",
 			description: "E-commerce para la venta de productos y servicios para mascotas.",
 			mainImage: "/projects/dogfy-main.png",
-			internalImages: ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png"],
+			internalImages: ["/projects/dogfy-screenshot-1.png", "/projects/dogfy-screenshot-2.png", "/projects/dogfy-screenshot-3.png", "/projects/dogfy-screenshot-4.png"],
 			tags: ["Angular", "PrimeNG", "Ionic", "MySQL", "Python", "FastAPI"],
 			type: 'private',
 			links: { preview: "https://dogfy.app" }
@@ -79,24 +92,21 @@ const ProjectsSection = () => {
 			links: { preview: "https://tupasaje.com" }
 		},
 		{
-			title: "Lluvia de Colores",
-			company: "Personal Project",
-			description: "Plataforma de estimulación infantil y seguimiento de desarrollo para padres y profesionales.",
-			mainImage: "/projects/lluvia-de-colores-main.png",
-			internalImages: ["/projects/lluvia-de-colores-screenshot-1.png", "/projects/lluvia-de-colores-screenshot-2.png", "/projects/lluvia-de-colores-screenshot-3.png"],
-			tags: ["Next.js", "React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL"],
-			type: 'personal',
-			links: {
-				preview: "https://lluviadecolores.vercel.app",
-				github: "https://github.com/GPeredo98/lluvia-de-colores-platform"
-			}
-		},
-		{
 			title: "Gestor Digital",
 			company: "Banco Fassil S.A.",
 			description: "Sistema de gestión del proceso crediticio en microcréditos.",
-			mainImage: "/projects/gestor-digital-main.png",
-			internalImages: ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png"],
+			mainImage: "/projects/gestor-digital-mainn.png",
+			internalImages: ["/projects/gedi-screenshot-1.png", "/projects/gedi-screenshot-2.png", "/projects/gedi-screenshot-3.png"],
+			tags: ["Angular", "Angular Material", "SCSS", "Figma"],
+			type: 'private',
+			links: { preview: "https://mencargo.net" }
+		},
+		{
+			title: "Microcréditos Landing Page",
+			company: "Banco Fassil S.A.",
+			description: "Página comercial para publicitar el producto de microcréditos.",
+			mainImage: "/projects/microcreditos-main.png",
+			internalImages: ["/projects/microcreditos-screenshot-1.png", "/projects/microcreditos-screenshot-2.png", "/projects/microcreditos-screenshot-3.png"],
 			tags: ["Angular", "Angular Material", "SCSS", "Figma"],
 			type: 'private',
 			links: { preview: "https://mencargo.net" }
@@ -106,7 +116,7 @@ const ProjectsSection = () => {
 			company: "Banco Fassil S.A.",
 			description: "Librería de componentes UI reutilizables en herramientas del banco.",
 			mainImage: "/projects/pionus-main.png",
-			internalImages: ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png"],
+			internalImages: ["/projects/pionus-screenshot-1.png", "/projects/pionus-screenshot-2.png", "/projects/pionus-screenshot-3.png"],
 			tags: ["Angular", "Angular Material", "SCSS", "Figma"],
 			type: 'private',
 			links: { preview: "https://mencargo.net" }

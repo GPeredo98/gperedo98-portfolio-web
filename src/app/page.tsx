@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         <div>
           <div className="text-3xl font-bold">+11</div>
-          <div className="text-zinc-500 text-sm">Projects Delivered</div>
+          <div className="text-zinc-500 text-sm">Projects Developed</div>
         </div>
         <div className="hidden md:block">
           <div className="text-3xl font-bold">100%</div>
