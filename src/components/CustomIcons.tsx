@@ -2,7 +2,7 @@ import { siAngular, siTailwindcss, siTypescript, siNextdotjs, siNgrx, siFigma, s
 
 interface IconProps {
 	className?: string;
-	size?: number | string; // Agregamos la propiedad size
+	size?: number | string;
 }
 
 export const YoutubeIcon = ({ className, size = 24 }: IconProps) => (
