@@ -1,3 +1,4 @@
+import { MapPinIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -62,6 +63,10 @@ export default function Home() {
         </div>
         <div className="flex flex-row items-center justify-center">
           <Image src={'/main-picture.jpg'} alt="Profile Image" width={400} height={400} className="rounded-full w-40 md:w-100" />
+          <span className="hidden md:flex absolute right-45 bottom-65 items-center ml-4 text-zinc-400 bg-zinc-900/50 border border-zinc-800 px-3 py-1 rounded-full">
+            <MapPinIcon className="w-4 h-4 mr-2" />
+            Santa Cruz, Bolivia
+          </span>
         </div>
       </div>
 

@@ -1,4 +1,4 @@
-import { BehanceIcon, GitHubIcon, LinkedInIcon, WhatsAppIcon } from '@/components/CustomIcons';
+import { BehanceIcon, GitHubIcon, LinkedInIcon, WhatsAppIcon, YoutubeIcon } from '@/components/CustomIcons';
 import { Mail, Send } from 'lucide-react';
 
 const Contact = () => {
@@ -20,6 +20,12 @@ const Contact = () => {
       icon: <BehanceIcon size={20} />, 
       url: 'https://www.behance.net/gabrielperedo1', 
       color: 'hover:text-purple-500'
+    },
+    { 
+      name: 'Youtube', 
+      icon: <YoutubeIcon size={20} />, 
+      url: 'https://www.youtube.com/@GabrielPeredo', 
+      color: 'hover:text-red-500'
     },
     { 
       name: 'Email', 

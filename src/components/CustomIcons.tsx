@@ -1,9 +1,16 @@
-import { siAngular, siTailwindcss, siTypescript, siNextdotjs, siNgrx, siFigma, siNestjs, siNodedotjs, siFastapi, siPython, siPostgresql, siMysql, siReact, siIonic, siCapacitor, siDocker, siVercel, siDigitalocean, siFlask, siPrimeng, siTypeorm, siGithub, siWhatsapp, siBehance, siBootstrap, siGit, siRender, siBitbucket, siAppstore, siGoogleplay, siSqlite, siDropbox, siPosthog, siSass, siGooglecloud, siSqlalchemy, siCloudflare, siNginx } from "simple-icons";
+import { siAngular, siTailwindcss, siTypescript, siNextdotjs, siNgrx, siFigma, siNestjs, siNodedotjs, siFastapi, siPython, siPostgresql, siMysql, siReact, siIonic, siCapacitor, siDocker, siVercel, siDigitalocean, siFlask, siPrimeng, siTypeorm, siGithub, siWhatsapp, siBehance, siBootstrap, siGit, siRender, siBitbucket, siAppstore, siGoogleplay, siSqlite, siDropbox, siPosthog, siSass, siGooglecloud, siSqlalchemy, siCloudflare, siNginx, siYoutube } from "simple-icons";
 
 interface IconProps {
 	className?: string;
 	size?: number | string; // Agregamos la propiedad size
 }
+
+export const YoutubeIcon = ({ className, size = 24 }: IconProps) => (
+	<svg role="img" fill="currentColor" width={size} height={size} className={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		<title>YouTube</title>
+		<path d={siYoutube.path} />
+	</svg>
+);
 
 export const WhatsAppIcon = ({ className, size = 24 }: IconProps) => (
 	<svg role="img" fill="currentColor" width={size} height={size} className={className} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
