@@ -46,7 +46,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:mt-20 pt-10 border-t border-zinc-800/50 w-full">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:mt-20 pt-10 md:border-t border-zinc-800/50 w-full">
         <div>
           <div className="text-3xl font-bold">+6 Years</div>
           <div className="text-zinc-500 text-sm">Experience</div>
