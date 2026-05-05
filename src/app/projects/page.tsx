@@ -43,8 +43,8 @@ const ProjectsSection = () => {
 			company: "Digital Harbor Inc.",
 			description: "Procesador de texto con IA para crear texto enriquecido.",
 			mainImage: "/projects/social-text-main.png",
-			internalImages: ["/projects/social-text-dash.jpg", "/projects/social-text-app.jpg"],
-			tags: ["TypeScript", "Figma"],
+			internalImages: ["/projects/social-text-screenshot-1.png"],
+			tags: ["HTML", "TypeScript", "Figma"],
 			type: 'private',
 			links: { preview: "https://digitalharborbolivia.com" }
 		},
@@ -116,7 +116,7 @@ const ProjectsSection = () => {
 			company: "Banco Fassil S.A.",
 			description: "Librería de componentes UI reutilizables en herramientas del banco.",
 			mainImage: "/projects/pionus-main.png",
-			internalImages: ["/projects/pionus-screenshot-1.png", "/projects/pionus-screenshot-2.png", "/projects/pionus-screenshot-3.png"],
+			internalImages: ["/projects/pionus-screenshot-1.png"],
 			tags: ["Angular", "Angular Material", "SCSS", "Figma"],
 			type: 'private',
 			links: { preview: "https://fassil.com.bo" }
