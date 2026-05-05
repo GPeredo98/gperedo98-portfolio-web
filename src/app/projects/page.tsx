@@ -157,9 +157,9 @@ const ProjectsSection = () => {
 				{projects.map((project, index) => (
 					<div
 						key={index}
-						className="group relative bg-zinc-900/40 border border-zinc-800/50 rounded-3xl overflow-hidden hover:border-cyan-500/50 transition-all duration-500"
+						className="group relative bg-zinc-900/40 border border-zinc-800/50 rounded-3xl hover:border-cyan-500/50 transition-all duration-500"
 					>
-						<div className="relative h-52 w-full overflow-hidden">
+						<div className="relative h-52 w-full overflow-hidden rounded-t-3xl">
 							<Image
 								src={project.mainImage}
 								alt={project.title}
@@ -225,8 +225,8 @@ const ProjectsSection = () => {
 							<div className="flex gap-3 pt-4 border-t border-zinc-800/50">
 								<span className="text-[10px] text-zinc-500 uppercase font-bold self-center mr-2">Inside:</span>
 								{project.internalImages.map((img: string, i: number) => (
-									<div key={i} className="relative h-12 w-20 rounded-lg overflow-hidden border border-zinc-700 transition-all cursor-pointer">
-										<Image src={img} alt="Internal screenshot" fill className="object-cover" />
+									<div key={i} className="relative h-12 w-20 rounded-lg overflow-hidden hover:overflow-visible border border-zinc-700 transition-all cursor-pointer">
+										<Image src={img} alt="Internal screenshot" fill className="object-cover hover:object-contain transition-transform duration-300 hover:scale-350 hover:z-10" />
 									</div>
 								))}
 							</div>
