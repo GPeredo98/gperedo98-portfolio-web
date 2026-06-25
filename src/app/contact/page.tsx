@@ -1,7 +1,13 @@
+"use client";
+
+import posthog from 'posthog-js';
 import { BehanceIcon, GitHubIcon, LinkedInIcon, WhatsAppIcon, YoutubeIcon } from '@/components/CustomIcons';
 import { Mail, Send } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 const Contact = () => {
+  const pathname = usePathname();
+
   const socialLinks = [
     {
       name: 'LinkedIn',
@@ -35,6 +41,15 @@ const Contact = () => {
     }
   ];
 
+  const trackContactLinkClick = (label: string, href: string, category: 'social' | 'direct') => {
+    posthog.capture('contact_link_clicked', {
+      label,
+      href,
+      category,
+      current_path: pathname,
+    });
+  };
+
   return (
     <section id="contact" className="py-24 px-6 max-w-5xl mx-auto">
       <div className="bg-zinc-900/40 border border-zinc-800 rounded-[2.5rem] p-5 md:p-16 overflow-hidden relative">
@@ -60,6 +75,7 @@ const Contact = () => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackContactLinkClick(link.name, link.url, 'social')}
                   className={`p-4 bg-zinc-950 border border-zinc-800 rounded-2xl text-zinc-500 transition-all duration-300 ${link.color} hover:border-zinc-700 hover:-translate-y-1`}
                   aria-label={link.name}
                 >
@@ -83,6 +99,7 @@ const Contact = () => {
                 href="https://wa.me/59169433575"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackContactLinkClick('Send a Message', 'https://wa.me/59169433575', 'direct')}
                 className="group flex items-center justify-center gap-3 w-full py-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded-2xl transition-all shadow-[0_0_20px_rgba(34,197,94,0.2)]"
               >
                 Send a Message
