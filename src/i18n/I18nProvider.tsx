@@ -43,19 +43,19 @@ function interpolate(template: string, params?: Params): string {
 }
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocale] = useState<Locale>(() => {
-    if (typeof window === "undefined") {
-      return "en";
-    }
+  // Always start with "en" so server and client render the same initial HTML.
+  // After hydration, the effect below reads the persisted/detected locale once.
+  const [locale, setLocale] = useState<Locale>("en");
 
-    const savedLocale = window.localStorage.getItem(STORAGE_KEY);
+  useEffect(() => {
+    const savedLocale = localStorage.getItem(STORAGE_KEY);
 
     if (savedLocale === "en" || savedLocale === "es") {
-      return savedLocale;
+      setLocale(savedLocale);
+    } else if (navigator.language.toLowerCase().startsWith("es")) {
+      setLocale("es");
     }
-
-    return window.navigator.language.toLowerCase().startsWith("es") ? "es" : "en";
-  });
+  }, []);
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, locale);

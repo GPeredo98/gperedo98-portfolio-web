@@ -2,8 +2,8 @@
   "common": {
     "language": "Idioma",
     "languages": {
-      "en": "Ingles",
-      "es": "Espanol"
+      "en": "Inglés",
+      "es": "Español"
     }
   },
   "navbar": {
@@ -21,7 +21,7 @@
   },
   "home": {
     "availability": "Disponible para nuevos retos",
-    "titleLine1": "Arquitectando el",
+    "titleLine1": "Construyendo el",
     "titleHighlight": "Futuro Digital",
     "description": "Desarrollador Full-Stack especializado en UI/UX y en construir aplicaciones de alto rendimiento con Angular, React, NestJS y codigo limpio.",
     "hashtag": "#DesdeBoliviaConAmor",

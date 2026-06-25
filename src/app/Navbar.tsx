@@ -1,16 +1,24 @@
 'use client';
 
 import posthog from 'posthog-js';
-import { type ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useI18n, type Locale } from '@/i18n/I18nProvider';
+import { useI18n } from '@/i18n/I18nProvider';
 
 const Navbar = () => {
 	const pathname = usePathname();
 	const [isOpen, setIsOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const { locale, setLocale, t } = useI18n();
+
+	const languageOptions = [
+		{ value: 'en' as const, label: 'EN', flag: '/flags/usa-flag.svg', name: t('common.languages.en') },
+		{ value: 'es' as const, label: 'ES', flag: '/flags/spain-flag.svg', name: t('common.languages.es') },
+	];
+
+	const currentLanguage = languageOptions.find((option) => option.value === locale) ?? languageOptions[0];
 
 	const navItems = [
 		{ name: t('navbar.items.knowledge'), href: '/knowledge' },
@@ -38,19 +46,9 @@ const Navbar = () => {
 		});
 	};
 
-  const handleLocaleChange = (event: ChangeEvent<HTMLSelectElement>) => {
-    const selectedLocale = event.target.value as Locale;
-
-    setLocale(selectedLocale);
-    posthog.capture('language_changed', {
-      locale: selectedLocale,
-      current_path: pathname,
-    });
-  };
-
 	return (
 		<nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl">
-			<div className="bg-zinc-900/70 backdrop-blur-md border border-zinc-800 px-4 md:px-6 py-3 rounded-full flex items-center justify-between shadow-2xl relative">
+			<div className="bg-zinc-900/70 backdrop-blur-md border border-zinc-800 px-4 md:px-4 py-3 rounded-full flex items-center justify-between shadow-2xl relative">
 				<div className='md:hidden w-6 h-6 flex ml-2 items-center justify-center'>
 					<button
 						aria-label={t('navbar.mobileMenuAria')}
@@ -108,27 +106,57 @@ const Navbar = () => {
 					})}
 				</ul>
 
-				<Link
-					href="https://wa.me/59169433575"
-					target="_blank"
-					onClick={() =>
-						trackNavbarClick(t('navbar.cta'), 'https://wa.me/59169433575', 'cta')
-					}
-					className="hidden md:inline-flex bg-white text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-green-500 hover:text-white transition-all"
-				>
-					{t('navbar.cta')}
-				</Link>
-
-				<div className="ml-2 md:ml-3">
-					<select
-						aria-label={t('navbar.languageAria')}
-						value={locale}
-						onChange={handleLocaleChange}
-						className="bg-zinc-900 text-white border border-zinc-700 rounded-full text-xs md:text-sm px-2 py-2 md:px-3 font-bold"
+				<div className="flex items-center gap-2">
+					<Link
+						href="https://wa.me/59169433575"
+						target="_blank"
+						onClick={() =>
+							trackNavbarClick(t('navbar.cta'), 'https://wa.me/59169433575', 'cta')
+						}
+						className="hidden md:inline-flex bg-white text-black px-4 py-2 rounded-full text-sm font-bold hover:bg-green-500 hover:text-white transition-all"
 					>
-						<option value="en">🇺🇸 EN</option>
-						<option value="es">🇪🇸 ES</option>
-					</select>
+						{t('navbar.cta')}
+					</Link>
+
+					<div className="relative">
+						<button
+							type="button"
+							aria-label={t('navbar.languageAria')}
+							aria-haspopup="menu"
+							aria-expanded={isLanguageOpen}
+							onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+							className="inline-flex items-center gap-2 bg-zinc-900 text-white border border-zinc-700 rounded-full text-xs md:text-sm px-2 py-2 md:px-3 font-bold hover:border-zinc-500 transition-colors"
+						>
+							<Image src={currentLanguage.flag} alt={currentLanguage.name} width={18} height={18} className="rounded-full" />
+							<span>{currentLanguage.label}</span>
+						</button>
+
+						{isLanguageOpen ? (
+							<div className="absolute right-0 top-full mt-2 w-36 overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 shadow-2xl z-50">
+								{languageOptions.map((option) => (
+									<button
+										key={option.value}
+										type="button"
+										onClick={() => {
+											setLocale(option.value);
+											setIsLanguageOpen(false);
+											posthog.capture('language_changed', {
+												locale: option.value,
+												current_path: pathname,
+											});
+										}}
+										className={`flex w-full items-center gap-3 px-3 py-2 text-left text-sm transition-colors hover:bg-zinc-900 ${
+											locale === option.value ? 'text-white' : 'text-zinc-400'
+										}`}
+									>
+										<Image src={option.flag} alt={option.name} width={18} height={18} className="rounded-full" />
+										<span>{option.label}</span>
+										<span className="text-xs text-zinc-500">{option.name}</span>
+									</button>
+								))}
+							</div>
+						) : null}
+					</div>
 				</div>
 			</div>
 
