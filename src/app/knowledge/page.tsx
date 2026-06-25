@@ -1,15 +1,20 @@
-import { AngularIcon, AppStoreIcon, BitbucketIcon, BootstrapIcon, CapacitorIcon, CloudflareIcon, DigitalOceanIcon, DockerIcon, DropboxIcon, FastAPIIcon, FigmaIcon, FlaskIcon, GitIcon, GoogleCloudIcon, IonicIcon, LinkedInIcon, MySQLIcon, NestJSIcon, NextJSIcon, NGINXIcon, NgRXIcon, NodeJSIcon, PlayStoreIcon, PostgreSQLIcon, PostHogIcon, PrimeNGIcon, PythonIcon, ReactNativeIcon, RenderIcon, SCSSIcon, SQLAlchemyIcon, SQLiteIcon, TailwindCSSIcon, TypeORMIcon, TypeScriptIcon, VercelIcon } from '@/components/CustomIcons';
+"use client";
+
+import { AngularIcon, AppStoreIcon, BitbucketIcon, BootstrapIcon, CapacitorIcon, CloudflareIcon, DigitalOceanIcon, DockerIcon, DropboxIcon, FastAPIIcon, FigmaIcon, FlaskIcon, GitIcon, GoogleCloudIcon, IonicIcon, MySQLIcon, NestJSIcon, NextJSIcon, NGINXIcon, NgRXIcon, NodeJSIcon, PlayStoreIcon, PostgreSQLIcon, PostHogIcon, PrimeNGIcon, PythonIcon, ReactNativeIcon, RenderIcon, SCSSIcon, SQLAlchemyIcon, SQLiteIcon, TailwindCSSIcon, TypeORMIcon, TypeScriptIcon, VercelIcon } from '@/components/CustomIcons';
 import { 
   Layout, Server, Smartphone, Globe, 
   Layers, Cloud, 
   Code2Icon,
 } from 'lucide-react';
+import { useI18n } from '@/i18n/I18nProvider';
 
 const Knowledge = () => {
+  const { t, tm } = useI18n();
   const iconSize = 18;
+  const badges = tm<string[]>('knowledge.badges');
   const techStack = [
     {
-      category: "Frontend Architecture",
+      category: t('knowledge.categories.frontend'),
       icon: <Layout className="text-cyan-400" />,
       skills: [
         { name: "Angular", icon: <AngularIcon size={iconSize} />,  },
@@ -27,7 +32,7 @@ const Knowledge = () => {
       color: "from-cyan-500/20 to-blue-500/20"
     },
     {
-      category: "Backend & Core",
+      category: t('knowledge.categories.backend'),
       icon: <Server className="text-purple-400" />,
       skills: [
         { name: "NestJS", icon: <NestJSIcon size={iconSize} />,  },
@@ -44,7 +49,7 @@ const Knowledge = () => {
       color: "from-purple-500/20 to-pink-500/20"
     },
     {
-      category: "Mobile Solutions",
+      category: t('knowledge.categories.mobile'),
       icon: <Smartphone className="text-amber-400" />,
       skills: [
         { name: "React Native", icon: <ReactNativeIcon size={iconSize} />,  },
@@ -58,7 +63,7 @@ const Knowledge = () => {
       color: "from-amber-500/20 to-orange-500/20"
     },
     {
-      category: "Cloud & Infrastructure",
+      category: t('knowledge.categories.cloud'),
       icon: <Cloud className="text-emerald-400" />,
       skills: [
         { name: "Docker", icon: <DockerIcon size={iconSize} />,  },
@@ -81,10 +86,10 @@ const Knowledge = () => {
     <section id="knowledge" className="py-24 px-6 max-w-7xl mx-auto relative">
       <div className="mb-16 text-center">
         <h2 className="text-sm font-mono text-cyan-500 tracking-widest uppercase mb-4">
-          Technical Ecosystem
+          {t('knowledge.eyebrow')}
         </h2>
         <h3 className="text-4xl md:text-5xl font-bold text-white">
-          Expertise & <span className="text-zinc-500">Toolbelt</span>
+          {t('knowledge.titlePrefix')} <span className="text-zinc-500">{t('knowledge.titleHighlight')}</span>
         </h3>
       </div>
 
@@ -129,16 +134,14 @@ const Knowledge = () => {
             <Globe size={24} />
           </div>
           <div>
-            <p className="text-white font-semibold">Strategic Management in Software Engineering</p>
-            <p className="text-zinc-500 text-sm">Masters Degree perspective on every project.</p>
+            <p className="text-white font-semibold">{t('knowledge.strategicTitle')}</p>
+            <p className="text-zinc-500 text-sm">{t('knowledge.strategicSubtitle')}</p>
           </div>
         </div>
         <div className="flex gap-4 flex-wrap">
-          <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Agile</span>
-          <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Team Leadership</span>
-          <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Mentoring</span>
-          <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Software Architecture</span>
-          <span className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">Clean Code</span>
+          {badges.map((badge) => (
+            <span key={badge} className="text-xs font-mono text-zinc-500 px-3 py-1 border border-zinc-800 rounded-lg">{badge}</span>
+          ))}
         </div>
       </div>
     </section>

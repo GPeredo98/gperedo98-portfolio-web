@@ -4,37 +4,39 @@ import posthog from 'posthog-js';
 import { BehanceIcon, GitHubIcon, LinkedInIcon, WhatsAppIcon, YoutubeIcon } from '@/components/CustomIcons';
 import { Mail, Send } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { useI18n } from '@/i18n/I18nProvider';
 
 const Contact = () => {
   const pathname = usePathname();
+  const { t } = useI18n();
 
   const socialLinks = [
     {
-      name: 'LinkedIn',
+      name: t('contact.social.linkedin'),
       icon: <LinkedInIcon size={20} />,
       url: 'https://linkedin.com/in/gperedo98',
       color: 'hover:text-blue-400'
     },
     {
-      name: 'GitHub',
+      name: t('contact.social.github'),
       icon: <GitHubIcon size={20} />,
       url: 'https://github.com/GPeredo98',
       color: 'hover:text-white'
     },
     {
-      name: 'Behance',
+      name: t('contact.social.behance'),
       icon: <BehanceIcon size={20} />,
       url: 'https://www.behance.net/gabrielperedo1',
       color: 'hover:text-purple-500'
     },
     {
-      name: 'Youtube',
+      name: t('contact.social.youtube'),
       icon: <YoutubeIcon size={20} />,
       url: 'https://www.youtube.com/@GabrielPeredo',
       color: 'hover:text-red-500'
     },
     {
-      name: 'Email',
+      name: t('contact.social.email'),
       icon: <Mail size={20} />,
       url: 'mailto:gabriel.peredo.98@gmail.com',
       color: 'hover:text-cyan-400'
@@ -60,12 +62,11 @@ const Contact = () => {
 
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Lets build <br />
-              <span className="text-zinc-500">something great.</span>
+              {t('contact.titleLine1')} <br />
+              <span className="text-zinc-500">{t('contact.titleLine2')}</span>
             </h2>
             <p className="hidden md:block text-zinc-400 text-lg mb-8 max-w-md">
-              ¿Tienes un proyecto en mente o buscas un perfil Senior para tu equipo?
-              Hablemos sobre cómo puedo aportar valor.
+              {t('contact.description')}
             </p>
 
             <div className="flex flex-wrap justify-center md:justify-start gap-2 md:gap-4">
@@ -90,19 +91,19 @@ const Contact = () => {
               <div className="inline-flex p-4 rounded-2xl bg-green-500/10 text-green-500 mb-6">
                 <WhatsAppIcon className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Direct Contact</h3>
+              <h3 className="text-xl font-bold text-white mb-2">{t('contact.directTitle')}</h3>
               <p className="text-zinc-500 text-sm mb-8">
-                Respuesta inmediata para consultas urgentes o propuestas directas.
+                {t('contact.directDescription')}
               </p>
 
               <a
                 href="https://wa.me/59169433575"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => trackContactLinkClick('Send a Message', 'https://wa.me/59169433575', 'direct')}
+                onClick={() => trackContactLinkClick(t('contact.sendMessage'), 'https://wa.me/59169433575', 'direct')}
                 className="group flex items-center justify-center gap-3 w-full py-4 bg-green-600 hover:bg-green-500 text-white font-bold rounded-2xl transition-all shadow-[0_0_20px_rgba(34,197,94,0.2)]"
               >
-                Send a Message
+                {t('contact.sendMessage')}
                 <Send size={18} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </a>
             </div>
@@ -111,13 +112,13 @@ const Contact = () => {
         </div>
 
         <div className="mt-5 md:mt-20 pt-8 border-t border-zinc-800/50 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-600 text-xs font-mono">
-          <p>© 2026 GABRIEL PEREDO — FULL STACK DEVELOPER</p>
+          <p>{t('contact.footer.copyright')}</p>
           <div className="flex gap-6">
             <span className="flex items-center gap-1">
-              BUILT WITH <span className="text-cyan-500">NEXT.JS</span>
+              {t('contact.footer.builtWith')} <span className="text-cyan-500">NEXT.JS</span>
             </span>
             <span className="flex items-center gap-1">
-              DESIGNED IN <span className="text-purple-500">BOLIVIA</span>
+              {t('contact.footer.designedIn')} <span className="text-purple-500">{t('contact.footer.country')}</span>
             </span>
           </div>
         </div>

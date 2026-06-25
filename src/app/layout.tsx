@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./Navbar";
 import TransitionProvider from "@/components/TransitionProvider";
+import { I18nProvider } from "@/i18n/I18nProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,17 +31,19 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <main className="relative min-h-screen bg-[#030712] text-white overflow-hidden">
-          <div className="mb-6">
-            <Navbar />
-          </div>
+        <I18nProvider>
+          <main className="relative min-h-screen bg-[#030712] text-white overflow-hidden">
+            <div className="mb-6">
+              <Navbar />
+            </div>
 
-          <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full" />
-          <div className="absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] bg-purple-500/20 blur-[120px] rounded-full" />
-          <TransitionProvider>
+            <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-cyan-500/20 blur-[120px] rounded-full" />
+            <div className="absolute bottom-[10%] right-[-10%] w-[400px] h-[400px] bg-purple-500/20 blur-[120px] rounded-full" />
+            <TransitionProvider>
 						{children}
 					</TransitionProvider>
-        </main>
+          </main>
+        </I18nProvider>
       </body>
     </html>
   );

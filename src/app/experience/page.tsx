@@ -1,13 +1,28 @@
+"use client";
+
 import { Briefcase, Calendar, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import { useI18n } from '@/i18n/I18nProvider';
+
+type ExperienceItem = {
+  company: string;
+  image?: string;
+  role: string;
+  start: string;
+  end: string | null;
+  location: string;
+  description: string;
+  tech: string[];
+};
 
 const Experience = () => {
+  const { locale, t, tm } = useI18n();
 
   const formatDate = (date: string | null) => {
-    if (!date) return "Present";
+    if (!date) return t('experience.present');
     const [year, month, day] = date.split("-").map(Number);
     const localDate = new Date(year, month - 1, day);
-    return localDate.toLocaleDateString("en-US", {
+    return localDate.toLocaleDateString(locale === 'es' ? 'es-ES' : 'en-US', {
       month: "long",
       year: "numeric",
     });
@@ -24,86 +39,26 @@ const Experience = () => {
     }
     const isCurrent = !end;
     if (isCurrent) {
-      return `+${years} year${years !== 1 ? 's' : ''}`;
+      return `+${years} ${t(years === 1 ? 'experience.year.one' : 'experience.year.other')}`;
     }
     let result = "";
     if (years > 0) {
-      result += `${years} year${years !== 1 ? 's' : ''}`;
+      result += `${years} ${t(years === 1 ? 'experience.year.one' : 'experience.year.other')}`;
     }
     if (months > 0) {
       if (result) result += " ";
-      result += `${months} month${months !== 1 ? 's' : ''}`;
+      result += `${months} ${t(months === 1 ? 'experience.month.one' : 'experience.month.other')}`;
     }
-    return result || "0 months";
+    return result || t('experience.zeroMonths');
   };
 
-  const experiences = [
-    {
-      company: "Overscope SRL",
-      image: "/companies/overscope.png",
-      role: "Software Architecture & Engineering Consultant",
-      start: "2023-10-01",
-      end: null,
-      location: "Hybrid / Bolivia",
-      description: "Consultoria en implementación de arquitecturas modernas y optimización de flujos de trabajo en equipos distribuidos.",
-      tech: ["Angular", "NestJS", "TypeScript", "PostgreSQL", "Docker", "CI/CD", "Ionic"]
-    },
-    {
-      company: "Digital Harbor Inc.",
-      image: "/companies/dh.png",
-      role: "Full-Stack Developer",
-      start: "2023-05-01",
-      end: null,
-      location: "Remote / International",
-      description: "Desarrollo de soluciones escalables para Social Text y Yedy.",
-      tech: ["Angular", "TypeScript", "NgRX", "SCSS", "Figma"]
-    },
-    {
-      company: "Banco Fassil S.A.",
-      image: "/companies/fassil.png",
-      role: "Software Engineer",
-      start: "2021-06-01",
-      end: "2023-05-02",
-      location: "Santa Cruz, Bolivia",
-      description: "Desarrollo del proyecto 'Gestor Digital' y creación del 'Pionus UI Kit', estandarizando la interfaz de usuario para toda la banca digital.",
-      tech: ["Angular", "RxJS", "Angular Material", "Design Systems", "UI/UX"]
-    },
-    {
-      company: "Clan Bolivia",
-      image: "/companies/clan.png",
-      role: "Full-Stack Developer",
-      start: "2021-04-01",
-      end: "2021-08-02",
-      location: "Remote / Bolivia",
-      description: "Contribución al proyecto 'TuPasaje.bo'. Creación de aplicaciones web y plataformas administrativas de alta demanda.",
-      tech: ["Angular", "PHP", "MySQL", "Nebula UI"]
-    },
-    {
-      company: "QSM Solutions",
-      image: "/companies/qsm.png",
-      role: "Software Developer, Tech Lead",
-      start: "2020-01-01",
-      end: "2021-06-02",
-      location: "Santa Cruz, Bolivia",
-      description: "Liderazgo en el desarrollo de soluciones personalizadas y conceptualización de plataformas como Dogfy y Ventu.",
-      tech: ["Angular", "Vue.js", "jQuery", "MySQL", "FastAPI", "Flask", "Ionic", "Python", "Figma"]
-    },
-    {
-      company: "Freelancer",
-      role: "Graphic Designer",
-      start: "2019-05-01",
-      end: "2021-04-02",
-      location: "Santa Cruz, Bolivia",
-      description: "Primeros pasos profesionales enfocados en creación de branding corporativo y producción audiovisual.",
-      tech: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Premiere Pro"]
-    }
-  ];
+  const experiences = tm<ExperienceItem[]>('experience.items');
 
   return (
     <section id="experience" className="py-24 px-6 max-w-5xl mx-auto relative">
       <div className="mb-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Professional <span className="text-cyan-500">Journey</span></h2>
-        <p className="text-zinc-400">Mi camino evolucionando ideas en productos digitales robustos.</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">{t('experience.titlePrefix')} <span className="text-cyan-500">{t('experience.titleHighlight')}</span></h2>
+        <p className="text-zinc-400">{t('experience.subtitle')}</p>
       </div>
 
       <div className="relative border-l border-zinc-800 ml-4 md:ml-0">

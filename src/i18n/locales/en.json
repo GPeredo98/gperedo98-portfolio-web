@@ -1,0 +1,349 @@
+{
+  "common": {
+    "language": "Language",
+    "languages": {
+      "en": "English",
+      "es": "Spanish"
+    }
+  },
+  "navbar": {
+    "logoAlt": "Logo",
+    "mobileMenuAria": "Toggle mobile menu",
+    "languageAria": "Select language",
+    "items": {
+      "knowledge": "Knowledge",
+      "projects": "Projects",
+      "experience": "Experience",
+      "aboutMe": "About me",
+      "contact": "Contact"
+    },
+    "cta": "Lets Talk"
+  },
+  "home": {
+    "availability": "Available for new challenges",
+    "titleLine1": "Architecting the",
+    "titleHighlight": "Digital Future",
+    "description": "Full-Stack Developer specialized in UI/UX and building high-performance applications with Angular, React, NestJS, and clean code.",
+    "hashtag": "#FromBoliviaWithLove",
+    "viewProjects": "View My Projects",
+    "downloadCv": "Download CV",
+    "location": "Santa Cruz, Bolivia",
+    "stats": {
+      "years": {
+        "one": "+{count} Year",
+        "other": "+{count} Years"
+      },
+      "experience": "Experience",
+      "projectsDeveloped": "Projects Developed",
+      "clientSatisfaction": "Client Satisfaction"
+    }
+  },
+  "about": {
+    "title": "The Engineer behind the code",
+    "paragraph1": "I am a Full-Stack Developer passionate about clean architecture and exceptional user experiences. With a strong technical foundation and a Master's Degree in Strategic Management, my focus is not only writing code, but designing solutions that drive business outcomes.",
+    "paragraph2": "I specialize in modern ecosystems such as Angular and NestJS, taking modularity and scalability to the next level. I strongly believe technology should be invisible: so fluid and efficient that users only feel ease of use.",
+    "education": {
+      "title": "Education",
+      "items": [
+        {
+          "title": "Masters Degree in: Strategic Management in Software Engineering",
+          "institution": "UAGRM School Of Engineering - Santa Cruz, Bolivia"
+        },
+        {
+          "title": "Course on: Agile Project Management",
+          "institution": "UAGRM School Of Engineering - Santa Cruz, Bolivia"
+        },
+        {
+          "title": "Bachelor degree in: System Engineering",
+          "institution": "Nur University - Santa Cruz, Bolivia"
+        },
+        {
+          "title": "Course on: English",
+          "institution": "CBA - Santa Cruz, Bolivia"
+        }
+      ]
+    },
+    "continuousLearning": {
+      "title": "Continuous Learning",
+      "courses": [
+        "Advanced Angular Patterns",
+        "NestJS Microservices",
+        "UI/UX Design for Engineers",
+        "Docker & Kubernetes Mastery",
+        "Agile Leadership",
+        "Cloud Architecture (AWS)"
+      ]
+    },
+    "beyondTerminal": {
+      "title": "Beyond the Terminal",
+      "hobbies": [
+        {
+          "title": "F1",
+          "description": "Watching Max Verstappen & Alonso dominate the track."
+        },
+        {
+          "title": "Wrestling",
+          "description": "Following complex storylines in WWE & AEW."
+        },
+        {
+          "title": "Fitness",
+          "description": "Focusing on bodybuilding & scientifically optimized training."
+        },
+        {
+          "title": "Golden Retriever",
+          "description": "Spending time with my best friend and the best breed."
+        }
+      ]
+    }
+  },
+  "experience": {
+    "titlePrefix": "Professional",
+    "titleHighlight": "Journey",
+    "subtitle": "My path evolving ideas into robust digital products.",
+    "present": "Present",
+    "year": {
+      "one": "year",
+      "other": "years"
+    },
+    "month": {
+      "one": "month",
+      "other": "months"
+    },
+    "zeroMonths": "0 months",
+    "items": [
+      {
+        "company": "Overscope SRL",
+        "image": "/companies/overscope.png",
+        "role": "Software Architecture & Engineering Consultant",
+        "start": "2023-10-01",
+        "end": null,
+        "location": "Hybrid / Bolivia",
+        "description": "Consulting on modern architecture implementation and workflow optimization in distributed teams.",
+        "tech": ["Angular", "NestJS", "TypeScript", "PostgreSQL", "Docker", "CI/CD", "Ionic"]
+      },
+      {
+        "company": "Digital Harbor Inc.",
+        "image": "/companies/dh.png",
+        "role": "Full-Stack Developer",
+        "start": "2023-05-01",
+        "end": null,
+        "location": "Remote / International",
+        "description": "Built scalable solutions for Social Text and Yedy.",
+        "tech": ["Angular", "TypeScript", "NgRX", "SCSS", "Figma"]
+      },
+      {
+        "company": "Banco Fassil S.A.",
+        "image": "/companies/fassil.png",
+        "role": "Software Engineer",
+        "start": "2021-06-01",
+        "end": "2023-05-02",
+        "location": "Santa Cruz, Bolivia",
+        "description": "Developed the 'Gestor Digital' project and created the 'Pionus UI Kit', standardizing user interfaces across digital banking products.",
+        "tech": ["Angular", "RxJS", "Angular Material", "Design Systems", "UI/UX"]
+      },
+      {
+        "company": "Clan Bolivia",
+        "image": "/companies/clan.png",
+        "role": "Full-Stack Developer",
+        "start": "2021-04-01",
+        "end": "2021-08-02",
+        "location": "Remote / Bolivia",
+        "description": "Contributed to 'TuPasaje.bo', building high-demand web apps and admin platforms.",
+        "tech": ["Angular", "PHP", "MySQL", "Nebula UI"]
+      },
+      {
+        "company": "QSM Solutions",
+        "image": "/companies/qsm.png",
+        "role": "Software Developer, Tech Lead",
+        "start": "2020-01-01",
+        "end": "2021-06-02",
+        "location": "Santa Cruz, Bolivia",
+        "description": "Led custom software initiatives and conceptualized platforms such as Dogfy and Ventu.",
+        "tech": ["Angular", "Vue.js", "jQuery", "MySQL", "FastAPI", "Flask", "Ionic", "Python", "Figma"]
+      },
+      {
+        "company": "Freelancer",
+        "role": "Graphic Designer",
+        "start": "2019-05-01",
+        "end": "2021-04-02",
+        "location": "Santa Cruz, Bolivia",
+        "description": "Started professional path focused on branding and audiovisual production.",
+        "tech": ["Adobe Photoshop", "Adobe Illustrator", "Adobe Premiere Pro"]
+      }
+    ]
+  },
+  "knowledge": {
+    "eyebrow": "Technical Ecosystem",
+    "titlePrefix": "Expertise &",
+    "titleHighlight": "Toolbelt",
+    "categories": {
+      "frontend": "Frontend Architecture",
+      "backend": "Backend & Core",
+      "mobile": "Mobile Solutions",
+      "cloud": "Cloud & Infrastructure"
+    },
+    "strategicTitle": "Strategic Management in Software Engineering",
+    "strategicSubtitle": "Masters Degree perspective on every project.",
+    "badges": ["Agile", "Team Leadership", "Mentoring", "Software Architecture", "Clean Code"]
+  },
+  "projects": {
+    "title": "Featured Work",
+    "subtitle": "A collection of enterprise solutions and personal experiments built with precision and scalability in mind.",
+    "totalProjects": "{count} Total Projects",
+    "personal": "Personal",
+    "enterprise": "Enterprise",
+    "insideLabel": "Inside:",
+    "items": [
+      {
+        "title": "Mencargo",
+        "company": "Overscope SRL",
+        "description": "Integrated management system for condominiums and security.",
+        "mainImage": "/projects/mencargo-main.png",
+        "internalImages": ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png", "/projects/mencargo-screenshot-3.png"],
+        "tags": ["TypeScript", "Angular", "NestJS", "PostgreSQL", "Ionic", "PrimeNG", "Docker", "Figma", "Multitenancy"],
+        "type": "private",
+        "links": { "preview": "https://mencargo.net" }
+      },
+      {
+        "title": "AidGlobe",
+        "company": "Personal Project",
+        "description": "Global platform for volunteer and social aid management.",
+        "mainImage": "/projects/aidglobe-main.jpg",
+        "internalImages": ["/projects/aidglobe-screenshot-1.png", "/projects/aidglobe-screenshot-2.png", "/projects/aidglobe-screenshot-3.png"],
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind", "ShadcnUI", "NestJS", "PostgreSQL", "Figma"],
+        "type": "personal",
+        "links": {
+          "preview": "https://aidglobe.org",
+          "github": "https://github.com/GPeredo98/aidglobe-platform"
+        }
+      },
+      {
+        "title": "Yedy",
+        "company": "Digital Harbor Inc.",
+        "description": "Project management tool with a social collaboration approach in every interaction.",
+        "mainImage": "/projects/yedy-main.png",
+        "internalImages": ["/projects/yedy-screenshot-1.png", "/projects/yedy-screenshot-2.png", "/projects/yedy-screenshot-3.png"],
+        "tags": ["Angular", "NgRX", "TypeScript", "SCSS", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://digitalharborbolivia.com" }
+      },
+      {
+        "title": "Social Text",
+        "company": "Digital Harbor Inc.",
+        "description": "AI-powered text processor for rich content creation.",
+        "mainImage": "/projects/social-text-main.png",
+        "internalImages": ["/projects/social-text-screenshot-1.png"],
+        "tags": ["HTML", "TypeScript", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://digitalharborbolivia.com" }
+      },
+      {
+        "title": "Lluvia de Colores",
+        "company": "Personal Project",
+        "description": "Early stimulation and development tracking platform for parents and professionals.",
+        "mainImage": "/projects/lluvia-de-colores-mainn.png",
+        "internalImages": ["/projects/lluvia-de-colores-screenshot-1.png", "/projects/lluvia-de-colores-screenshot-2.png", "/projects/lluvia-de-colores-screenshot-3.png"],
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL"],
+        "type": "personal",
+        "links": {
+          "preview": "https://lluviadecolores.vercel.app",
+          "github": "https://github.com/GPeredo98/lluvia-de-colores-platform"
+        }
+      },
+      {
+        "title": "Ventu",
+        "company": "QSM Solutions",
+        "description": "Revenue and guest management platform for events and organizers.",
+        "mainImage": "/projects/ventu-main.png",
+        "internalImages": ["/projects/ventu-screenshot-1.png", "/projects/ventu-screenshot-2.png", "/projects/ventu-screenshot-3.png", "/projects/ventu-screenshot-4.png"],
+        "tags": ["Angular", "PrimeNG", "Ionic", "MySQL", "Python", "FastAPI", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://ventu.vip" }
+      },
+      {
+        "title": "Dogfy",
+        "company": "QSM Solutions",
+        "description": "E-commerce for pet products and services.",
+        "mainImage": "/projects/dogfy-main.png",
+        "internalImages": ["/projects/dogfy-screenshot-1.png", "/projects/dogfy-screenshot-2.png", "/projects/dogfy-screenshot-3.png", "/projects/dogfy-screenshot-4.png"],
+        "tags": ["Angular", "PrimeNG", "Ionic", "MySQL", "Python", "FastAPI"],
+        "type": "private",
+        "links": { "preview": "https://dogfy.app" }
+      },
+      {
+        "title": "TuPasaje.bo",
+        "company": "Clan Bolivia",
+        "description": "Web platform for ticket sales and travel services.",
+        "mainImage": "/projects/tupasaje-main.png",
+        "internalImages": ["/projects/tupasaje-screenshot-1.png", "/projects/tupasaje-screenshot-2.png", "/projects/tupasaje-screenshot-3.png"],
+        "tags": ["Angular", "PrimeNG", "Nebula UI", "PHP", "MySQL"],
+        "type": "private",
+        "links": { "preview": "https://tupasaje.bo" }
+      },
+      {
+        "title": "Gestor Digital",
+        "company": "Banco Fassil S.A.",
+        "description": "Credit process management system for microloans.",
+        "mainImage": "/projects/gestor-digital-mainn.png",
+        "internalImages": ["/projects/gedi-screenshot-1.png", "/projects/gedi-screenshot-2.png", "/projects/gedi-screenshot-3.png"],
+        "tags": ["Angular", "Angular Material", "SCSS", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://fassil.com.bo" }
+      },
+      {
+        "title": "Microcredits Landing Page",
+        "company": "Banco Fassil S.A.",
+        "description": "Commercial page to promote the microcredit product.",
+        "mainImage": "/projects/microcreditos-main.png",
+        "internalImages": ["/projects/microcreditos-screenshot-1.png", "/projects/microcreditos-screenshot-2.png", "/projects/microcreditos-screenshot-3.png"],
+        "tags": ["Angular", "Angular Material", "SCSS", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://fassil.com.bo" }
+      },
+      {
+        "title": "Pionus UI Kit",
+        "company": "Banco Fassil S.A.",
+        "description": "Reusable UI component library for the bank's internal tools.",
+        "mainImage": "/projects/pionus-main.png",
+        "internalImages": ["/projects/pionus-screenshot-1.png"],
+        "tags": ["Angular", "Angular Material", "SCSS", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://fassil.com.bo" }
+      },
+      {
+        "title": "Personal Portfolio",
+        "company": "Personal Project",
+        "description": "Personal portfolio showcasing my projects and experience.",
+        "mainImage": "/projects/portfolio-main.png",
+        "internalImages": ["/projects/portfolio-screenshot-1.png", "/projects/portfolio-screenshot-2.png"],
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind"],
+        "type": "personal",
+        "links": {
+          "preview": "https://gperedo98.vercel.app",
+          "github": "https://github.com/GPeredo98/gperedo98-portfolio"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "titleLine1": "Lets build",
+    "titleLine2": "something great.",
+    "description": "Do you have a project in mind or need a senior profile for your team? Let's talk about how I can add value.",
+    "directTitle": "Direct Contact",
+    "directDescription": "Immediate response for urgent inquiries or direct proposals.",
+    "sendMessage": "Send a Message",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "behance": "Behance",
+      "youtube": "Youtube",
+      "email": "Email"
+    },
+    "footer": {
+      "copyright": "© 2026 GABRIEL PEREDO — FULL STACK DEVELOPER",
+      "builtWith": "BUILT WITH",
+      "designedIn": "DESIGNED IN",
+      "country": "BOLIVIA"
+    }
+  }
+}

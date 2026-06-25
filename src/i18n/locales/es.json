@@ -1,0 +1,349 @@
+{
+  "common": {
+    "language": "Idioma",
+    "languages": {
+      "en": "Ingles",
+      "es": "Espanol"
+    }
+  },
+  "navbar": {
+    "logoAlt": "Logo",
+    "mobileMenuAria": "Alternar menu movil",
+    "languageAria": "Seleccionar idioma",
+    "items": {
+      "knowledge": "Conocimientos",
+      "projects": "Proyectos",
+      "experience": "Experiencia",
+      "aboutMe": "Sobre mi",
+      "contact": "Contacto"
+    },
+    "cta": "Hablemos"
+  },
+  "home": {
+    "availability": "Disponible para nuevos retos",
+    "titleLine1": "Arquitectando el",
+    "titleHighlight": "Futuro Digital",
+    "description": "Desarrollador Full-Stack especializado en UI/UX y en construir aplicaciones de alto rendimiento con Angular, React, NestJS y codigo limpio.",
+    "hashtag": "#DesdeBoliviaConAmor",
+    "viewProjects": "Ver Mis Proyectos",
+    "downloadCv": "Descargar CV",
+    "location": "Santa Cruz, Bolivia",
+    "stats": {
+      "years": {
+        "one": "+{count} Ano",
+        "other": "+{count} Anos"
+      },
+      "experience": "Experiencia",
+      "projectsDeveloped": "Proyectos Desarrollados",
+      "clientSatisfaction": "Satisfaccion del Cliente"
+    }
+  },
+  "about": {
+    "title": "El Ingeniero detras del codigo",
+    "paragraph1": "Soy un Desarrollador Full-Stack apasionado por la arquitectura limpia y las experiencias de usuario excepcionales. Con una solida base tecnica y una Maestria en Direccion Estrategica, mi enfoque no es solo escribir codigo, sino disenar soluciones que impulsen negocios.",
+    "paragraph2": "Me especializo en ecosistemas modernos como Angular y NestJS, llevando la modularidad y la escalabilidad al siguiente nivel. Creo firmemente que la tecnologia debe ser invisible: tan fluida y eficiente que el usuario solo sienta la facilidad de uso.",
+    "education": {
+      "title": "Educacion",
+      "items": [
+        {
+          "title": "Maestria en: Direccion Estrategica en Ingenieria de Software",
+          "institution": "Facultad de Ingenieria UAGRM - Santa Cruz, Bolivia"
+        },
+        {
+          "title": "Curso de: Gestion Agil de Proyectos",
+          "institution": "Facultad de Ingenieria UAGRM - Santa Cruz, Bolivia"
+        },
+        {
+          "title": "Licenciatura en: Ingenieria de Sistemas",
+          "institution": "Universidad Nur - Santa Cruz, Bolivia"
+        },
+        {
+          "title": "Curso de: Ingles",
+          "institution": "CBA - Santa Cruz, Bolivia"
+        }
+      ]
+    },
+    "continuousLearning": {
+      "title": "Aprendizaje Continuo",
+      "courses": [
+        "Patrones Avanzados de Angular",
+        "Microservicios con NestJS",
+        "Diseno UI/UX para Ingenieros",
+        "Dominio de Docker y Kubernetes",
+        "Liderazgo Agil",
+        "Arquitectura en la Nube (AWS)"
+      ]
+    },
+    "beyondTerminal": {
+      "title": "Mas alla de la Terminal",
+      "hobbies": [
+        {
+          "title": "F1",
+          "description": "Ver a Max Verstappen y Alonso dominar la pista."
+        },
+        {
+          "title": "Lucha Libre",
+          "description": "Siguiendo historias complejas en WWE y AEW."
+        },
+        {
+          "title": "Fitness",
+          "description": "Enfoque en culturismo y entrenamiento optimizado cientificamente."
+        },
+        {
+          "title": "Golden Retriever",
+          "description": "Compartiendo tiempo con mi mejor amigo y la mejor raza."
+        }
+      ]
+    }
+  },
+  "experience": {
+    "titlePrefix": "Trayectoria",
+    "titleHighlight": "Profesional",
+    "subtitle": "Mi camino evolucionando ideas en productos digitales robustos.",
+    "present": "Actualidad",
+    "year": {
+      "one": "ano",
+      "other": "anos"
+    },
+    "month": {
+      "one": "mes",
+      "other": "meses"
+    },
+    "zeroMonths": "0 meses",
+    "items": [
+      {
+        "company": "Overscope SRL",
+        "image": "/companies/overscope.png",
+        "role": "Consultor de Arquitectura e Ingenieria de Software",
+        "start": "2023-10-01",
+        "end": null,
+        "location": "Hibrido / Bolivia",
+        "description": "Consultoria en implementacion de arquitecturas modernas y optimizacion de flujos de trabajo en equipos distribuidos.",
+        "tech": ["Angular", "NestJS", "TypeScript", "PostgreSQL", "Docker", "CI/CD", "Ionic"]
+      },
+      {
+        "company": "Digital Harbor Inc.",
+        "image": "/companies/dh.png",
+        "role": "Desarrollador Full-Stack",
+        "start": "2023-05-01",
+        "end": null,
+        "location": "Remoto / Internacional",
+        "description": "Desarrollo de soluciones escalables para Social Text y Yedy.",
+        "tech": ["Angular", "TypeScript", "NgRX", "SCSS", "Figma"]
+      },
+      {
+        "company": "Banco Fassil S.A.",
+        "image": "/companies/fassil.png",
+        "role": "Ingeniero de Software",
+        "start": "2021-06-01",
+        "end": "2023-05-02",
+        "location": "Santa Cruz, Bolivia",
+        "description": "Desarrollo del proyecto 'Gestor Digital' y creacion del 'Pionus UI Kit', estandarizando interfaces para toda la banca digital.",
+        "tech": ["Angular", "RxJS", "Angular Material", "Design Systems", "UI/UX"]
+      },
+      {
+        "company": "Clan Bolivia",
+        "image": "/companies/clan.png",
+        "role": "Desarrollador Full-Stack",
+        "start": "2021-04-01",
+        "end": "2021-08-02",
+        "location": "Remoto / Bolivia",
+        "description": "Contribucion al proyecto 'TuPasaje.bo'. Creacion de aplicaciones web y plataformas administrativas de alta demanda.",
+        "tech": ["Angular", "PHP", "MySQL", "Nebula UI"]
+      },
+      {
+        "company": "QSM Solutions",
+        "image": "/companies/qsm.png",
+        "role": "Desarrollador de Software, Tech Lead",
+        "start": "2020-01-01",
+        "end": "2021-06-02",
+        "location": "Santa Cruz, Bolivia",
+        "description": "Liderazgo en el desarrollo de soluciones personalizadas y conceptualizacion de plataformas como Dogfy y Ventu.",
+        "tech": ["Angular", "Vue.js", "jQuery", "MySQL", "FastAPI", "Flask", "Ionic", "Python", "Figma"]
+      },
+      {
+        "company": "Freelancer",
+        "role": "Disenador Grafico",
+        "start": "2019-05-01",
+        "end": "2021-04-02",
+        "location": "Santa Cruz, Bolivia",
+        "description": "Primeros pasos profesionales enfocados en creacion de branding corporativo y produccion audiovisual.",
+        "tech": ["Adobe Photoshop", "Adobe Illustrator", "Adobe Premiere Pro"]
+      }
+    ]
+  },
+  "knowledge": {
+    "eyebrow": "Ecosistema Tecnico",
+    "titlePrefix": "Experiencia y",
+    "titleHighlight": "Herramientas",
+    "categories": {
+      "frontend": "Arquitectura Frontend",
+      "backend": "Backend y Core",
+      "mobile": "Soluciones Moviles",
+      "cloud": "Nube e Infraestructura"
+    },
+    "strategicTitle": "Direccion Estrategica en Ingenieria de Software",
+    "strategicSubtitle": "Perspectiva de maestria en cada proyecto.",
+    "badges": ["Agile", "Liderazgo de Equipo", "Mentoria", "Arquitectura de Software", "Codigo Limpio"]
+  },
+  "projects": {
+    "title": "Trabajo Destacado",
+    "subtitle": "Una coleccion de soluciones empresariales y experimentos personales construidos con precision y escalabilidad.",
+    "totalProjects": "{count} Proyectos Totales",
+    "personal": "Personal",
+    "enterprise": "Empresarial",
+    "insideLabel": "Dentro:",
+    "items": [
+      {
+        "title": "Mencargo",
+        "company": "Overscope SRL",
+        "description": "Sistema integral de gestion para condominios y seguridad.",
+        "mainImage": "/projects/mencargo-main.png",
+        "internalImages": ["/projects/mencargo-screenshot-1.png", "/projects/mencargo-screenshot-2.png", "/projects/mencargo-screenshot-3.png"],
+        "tags": ["TypeScript", "Angular", "NestJS", "PostgreSQL", "Ionic", "PrimeNG", "Docker", "Figma", "Multitenancy"],
+        "type": "private",
+        "links": { "preview": "https://mencargo.net" }
+      },
+      {
+        "title": "AidGlobe",
+        "company": "Proyecto Personal",
+        "description": "Plataforma global para la gestion de voluntariado y ayuda social.",
+        "mainImage": "/projects/aidglobe-main.jpg",
+        "internalImages": ["/projects/aidglobe-screenshot-1.png", "/projects/aidglobe-screenshot-2.png", "/projects/aidglobe-screenshot-3.png"],
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind", "ShadcnUI", "NestJS", "PostgreSQL", "Figma"],
+        "type": "personal",
+        "links": {
+          "preview": "https://aidglobe.org",
+          "github": "https://github.com/GPeredo98/aidglobe-platform"
+        }
+      },
+      {
+        "title": "Yedy",
+        "company": "Digital Harbor Inc.",
+        "description": "Herramienta de gestion de proyectos orientada a un enfoque social de colaboracion en cada interaccion.",
+        "mainImage": "/projects/yedy-main.png",
+        "internalImages": ["/projects/yedy-screenshot-1.png", "/projects/yedy-screenshot-2.png", "/projects/yedy-screenshot-3.png"],
+        "tags": ["Angular", "NgRX", "TypeScript", "SCSS", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://digitalharborbolivia.com" }
+      },
+      {
+        "title": "Social Text",
+        "company": "Digital Harbor Inc.",
+        "description": "Procesador de texto con IA para crear contenido enriquecido.",
+        "mainImage": "/projects/social-text-main.png",
+        "internalImages": ["/projects/social-text-screenshot-1.png"],
+        "tags": ["HTML", "TypeScript", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://digitalharborbolivia.com" }
+      },
+      {
+        "title": "Lluvia de Colores",
+        "company": "Proyecto Personal",
+        "description": "Plataforma de estimulacion infantil y seguimiento de desarrollo para padres y profesionales.",
+        "mainImage": "/projects/lluvia-de-colores-mainn.png",
+        "internalImages": ["/projects/lluvia-de-colores-screenshot-1.png", "/projects/lluvia-de-colores-screenshot-2.png", "/projects/lluvia-de-colores-screenshot-3.png"],
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind", "NestJS", "PostgreSQL"],
+        "type": "personal",
+        "links": {
+          "preview": "https://lluviadecolores.vercel.app",
+          "github": "https://github.com/GPeredo98/lluvia-de-colores-platform"
+        }
+      },
+      {
+        "title": "Ventu",
+        "company": "QSM Solutions",
+        "description": "Sistema de gestion de ingresos e invitados para eventos y organizadores.",
+        "mainImage": "/projects/ventu-main.png",
+        "internalImages": ["/projects/ventu-screenshot-1.png", "/projects/ventu-screenshot-2.png", "/projects/ventu-screenshot-3.png", "/projects/ventu-screenshot-4.png"],
+        "tags": ["Angular", "PrimeNG", "Ionic", "MySQL", "Python", "FastAPI", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://ventu.vip" }
+      },
+      {
+        "title": "Dogfy",
+        "company": "QSM Solutions",
+        "description": "E-commerce para la venta de productos y servicios para mascotas.",
+        "mainImage": "/projects/dogfy-main.png",
+        "internalImages": ["/projects/dogfy-screenshot-1.png", "/projects/dogfy-screenshot-2.png", "/projects/dogfy-screenshot-3.png", "/projects/dogfy-screenshot-4.png"],
+        "tags": ["Angular", "PrimeNG", "Ionic", "MySQL", "Python", "FastAPI"],
+        "type": "private",
+        "links": { "preview": "https://dogfy.app" }
+      },
+      {
+        "title": "TuPasaje.bo",
+        "company": "Clan Bolivia",
+        "description": "Plataforma web de venta de pasajes y servicios de viaje.",
+        "mainImage": "/projects/tupasaje-main.png",
+        "internalImages": ["/projects/tupasaje-screenshot-1.png", "/projects/tupasaje-screenshot-2.png", "/projects/tupasaje-screenshot-3.png"],
+        "tags": ["Angular", "PrimeNG", "Nebula UI", "PHP", "MySQL"],
+        "type": "private",
+        "links": { "preview": "https://tupasaje.bo" }
+      },
+      {
+        "title": "Gestor Digital",
+        "company": "Banco Fassil S.A.",
+        "description": "Sistema de gestion del proceso crediticio en microcreditos.",
+        "mainImage": "/projects/gestor-digital-mainn.png",
+        "internalImages": ["/projects/gedi-screenshot-1.png", "/projects/gedi-screenshot-2.png", "/projects/gedi-screenshot-3.png"],
+        "tags": ["Angular", "Angular Material", "SCSS", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://fassil.com.bo" }
+      },
+      {
+        "title": "Landing de Microcreditos",
+        "company": "Banco Fassil S.A.",
+        "description": "Pagina comercial para publicitar el producto de microcreditos.",
+        "mainImage": "/projects/microcreditos-main.png",
+        "internalImages": ["/projects/microcreditos-screenshot-1.png", "/projects/microcreditos-screenshot-2.png", "/projects/microcreditos-screenshot-3.png"],
+        "tags": ["Angular", "Angular Material", "SCSS", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://fassil.com.bo" }
+      },
+      {
+        "title": "Pionus UI Kit",
+        "company": "Banco Fassil S.A.",
+        "description": "Libreria de componentes UI reutilizables para herramientas del banco.",
+        "mainImage": "/projects/pionus-main.png",
+        "internalImages": ["/projects/pionus-screenshot-1.png"],
+        "tags": ["Angular", "Angular Material", "SCSS", "Figma"],
+        "type": "private",
+        "links": { "preview": "https://fassil.com.bo" }
+      },
+      {
+        "title": "Portfolio Personal",
+        "company": "Proyecto Personal",
+        "description": "Portafolio personal que muestra mis proyectos y experiencia.",
+        "mainImage": "/projects/portfolio-main.png",
+        "internalImages": ["/projects/portfolio-screenshot-1.png", "/projects/portfolio-screenshot-2.png"],
+        "tags": ["Next.js", "React", "TypeScript", "Tailwind"],
+        "type": "personal",
+        "links": {
+          "preview": "https://gperedo98.vercel.app",
+          "github": "https://github.com/GPeredo98/gperedo98-portfolio"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "titleLine1": "Construyamos",
+    "titleLine2": "algo genial.",
+    "description": "Tienes un proyecto en mente o buscas un perfil senior para tu equipo? Hablemos sobre como puedo aportar valor.",
+    "directTitle": "Contacto Directo",
+    "directDescription": "Respuesta inmediata para consultas urgentes o propuestas directas.",
+    "sendMessage": "Enviar Mensaje",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "behance": "Behance",
+      "youtube": "Youtube",
+      "email": "Correo"
+    },
+    "footer": {
+      "copyright": "© 2026 GABRIEL PEREDO — DESARROLLADOR FULL STACK",
+      "builtWith": "HECHO CON",
+      "designedIn": "DISENADO EN",
+      "country": "BOLIVIA"
+    }
+  }
+}
