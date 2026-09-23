@@ -228,6 +228,19 @@
         "links": { "preview": "https://digitalharborbolivia.com" }
       },
       {
+        "title": "Jottings",
+        "company": "Personal Project",
+        "description": "Simple note application for capturing ideas and thoughts.",
+        "mainImage": "/projects/jottings-main.png",
+        "internalImages": ["/projects/jottings-screenshot-1.png", "/projects/jottings-screenshot-2.png"],
+        "tags": ["HTML", "TypeScript", "Angular", "Supabase", "Tailwind"],
+        "type": "personal",
+        "links": {
+          "preview": "https://jottings.space",
+          "github": "https://github.com/GPeredo98/jottings-app"
+        }
+      },
+      {
         "title": "Social Text",
         "company": "Digital Harbor Inc.",
         "description": "AI-powered text processor for rich content creation.",
